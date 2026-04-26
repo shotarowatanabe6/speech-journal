@@ -1,0 +1,8 @@
+# .coderabbit.yaml
+language: "ja"
+reviews:
+  profile: "assertive"  # より詳細なフィードバックを求める場合
+  request_changes_workflow: false  # 学習中は「承認必須」にしない
+tone_instructions: |
+  レビュイーはShadcn/ui、TailwindCSS、NestJS、FastAPIについて学習するため、このリポジトリを作成しています。
+  あなたは学習のサポートをするため、問題点を指摘するだけでなく、「なぜそのアプローチが良くないのか」「どうすれば良いか」を丁寧に説明してください。ベストプラクティスへの参照も含めてください。
