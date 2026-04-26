@@ -11,12 +11,18 @@ export class AppController {
   }
 }
 
+// dtoは別ファイルに分けるべき？
+export class HealthCheckDto {
+  status: 'ok';
+  timestamp: string; // Unixtime
+}
+
 @Controller('health')
 export class HealthCheckController {
   constructor(private readonly healthService: HealthCheckService) {}
 
   @Get()
-  getHealth(): string {
+  getHealth(): HealthCheckDto {
     return this.healthService.getHealth();
   }
 }

@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { HealthCheckDto } from 'src/app.controller';
 
 @Injectable()
 export class AppService {
@@ -9,7 +10,10 @@ export class AppService {
 
 @Injectable()
 export class HealthCheckService {
-  getHealth(): string {
-    return 'ok';
+  getHealth(): HealthCheckDto {
+    return {
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+    };
   }
 }
